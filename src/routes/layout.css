@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@700&family=Reddit+Sans:wght@400;600;700;800&display=swap');
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme inline {
+	--font-sans: 'Reddit Sans', sans-serif;
+	--font-serif: 'Red Rose', serif;
+}
+
+:root {
+	--page-bg: #fffdfa;
+	--text-primary: #111111;
+	--text-muted: #6a6a73;
+	--blit-red: #ff3b30;
+}
+
+html {
+	scroll-behavior: smooth;
+	background: var(--page-bg);
+}
+
+body {
+	min-height: 100vh;
+	background:
+		radial-gradient(circle at top, rgba(255, 244, 240, 0.75), transparent 26%),
+		linear-gradient(180deg, #fffdfa 0%, #fffaf6 100%);
+	color: var(--text-primary);
+	font-family: 'Reddit Sans', sans-serif;
+	text-rendering: optimizeLegibility;
+}
+
+a,
+button {
+	-webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible {
+	outline: 3px solid rgba(255, 59, 48, 0.35);
+	outline-offset: 4px;
+	border-radius: 0.75rem;
+}
+
+.bg-plus-pattern {
+	background-image:
+		linear-gradient(rgba(160, 160, 166, 0.16) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(160, 160, 166, 0.16) 1px, transparent 1px),
+		linear-gradient(rgba(160, 160, 166, 0.16) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(160, 160, 166, 0.16) 1px, transparent 1px);
+	background-position:
+		center center,
+		center center,
+		center center,
+		center center;
+	background-size:
+		2.6rem 2.6rem,
+		2.6rem 2.6rem,
+		2.6rem 2.6rem,
+		2.6rem 2.6rem;
+}
+
+.bg-plus-pattern::before {
+	content: '';
+	display: block;
+	position: absolute;
+	inset: 0;
+	background-image:
+		radial-gradient(circle, transparent 0.17rem, rgba(0, 0, 0, 0) 0.17rem),
+		radial-gradient(circle, transparent 0.17rem, rgba(0, 0, 0, 0) 0.17rem);
+	background-size: 2.6rem 2.6rem;
+	background-position:
+		center center,
+		center center;
+	opacity: 0;
+}
+
+.reddit-sans {
+	font-family: 'Reddit Sans', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.reddit-sans {
+	font-family: 'Reddit Sans', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.reddit-sans-xbold {
+	font-family: 'Reddit Sans', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 800;
+	font-style: normal;
+}
+
+.reddit-sans-bold {
+	font-family: 'Reddit Sans', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.reddit-sans-semibold {
+	font-family: 'Reddit Sans', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.red-rose-title {
+	font-family: 'Red Rose', serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
