@@ -27,6 +27,7 @@ export type Project = {
 	title: string;
 	author: string;
 	art: 'ultraterm' | 'deskmate' | 'bomb' | 'keyboard';
+	destination?: string;
 };
 
 export const questionSections: QuestionSection[] = [
@@ -100,8 +101,8 @@ export const faqs: FAQ[] = [
 ];
 
 export const projects: Project[] = [
-	{ title: 'Ultraterm', author: 'by Finn, Canada', art: 'ultraterm' },
-	{ title: 'Deskmate', author: 'by Suhansh, Singapore', art: 'deskmate' },
-	{ title: 'Bomb Defusal', author: 'by Josh, Brandon, Jonathan, Australia', art: 'bomb' },
-	{ title: 'Biblically Accurate Keyboard', author: 'by Alex Tran, California', art: 'keyboard' }
+	{ title: 'Ultraterm', author: 'by Finn, Canada', art: 'ultraterm', destination: 'https://github.com/jamdotjar/ultraterm' },
+	{ title: 'Deskmate', author: 'by Suhansh, Singapore', art: 'deskmate', destination: 'https://github.com/Valder077/deskmate' },
+	{ title: 'Bomb Defusal', author: 'by Josh, Brandon, Jonathan, Australia', art: 'bomb', destination: 'https://github.com/Jayx2u/blind-defusal' },
+	{ title: 'Biblically Accurate Keyboard', author: 'by Alex Tran, California', art: 'keyboard', destination: 'https://github.com/geg-tech/biblicallyaccuratekeyboard' }
 ];

@@ -41,7 +41,7 @@
 				>
 					Hack Clubbers all around the world started their project from scratch with messy wires,
 					lots of hot glue, cardboard, and still made amazing things. If you ever feel blocked,
-					these guides are here to give you a friendly place to start.
+					I conveniently placed some guides here to give you a good start!
 				</p>
 			</div>
 

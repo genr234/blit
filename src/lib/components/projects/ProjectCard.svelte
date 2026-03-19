@@ -11,7 +11,8 @@
 	let { project }: Props = $props();
 </script>
 
-<article class="mx-auto flex max-w-[22rem] flex-col items-center transition-transform duration-200 hover:-translate-y-1">
+<a href={project.destination ?? '#'} target="_blank" rel="noopener noreferrer external" class="no-underline">
+	<article class="mx-auto flex max-w-88 flex-col items-center transition-transform duration-200 hover:-translate-y-1">
 	<ProjectArt variant={project.art} class="w-full" />
 
 	<div
@@ -29,3 +30,4 @@
 		<ExternalLinkIcon class="mt-0.5 shrink-0" />
 	</div>
 </article>
+</a>
