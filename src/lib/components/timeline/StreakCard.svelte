@@ -61,7 +61,7 @@
 		</div>
 
 		<div class="reddit-sans mt-3 grid grid-cols-[auto_31%_31%_auto] text-[0.72rem] text-zinc-500">
-			<span class="justify-self-start">you are here</span>
+			<span></span>
 			<span class="reddit-sans-bold justify-self-center text-[#ff3b30]">7 days</span>
 			<span class="reddit-sans-bold justify-self-center text-[#ff3b30]">14 days</span>
 			<span class="reddit-sans-bold justify-self-end text-[#ff3b30]">30 days</span>

@@ -46,7 +46,7 @@ export const timelineSteps: TimelineStepData[] = [
 	{
 		number: 2,
 		title: 'Start working on your console and devlog everything',
-		body: 'It is time to get your hands dirty. Your console needs hardware, a case, and software. Depending on what you are making, a controller might help too. Post progress every day so your streak grows while the build comes together.',
+		body: 'It\'s time to get your hands dirty! Your console needs hardware, a case, and software. Depending on what you are making, a controller might help too. Post a devlog everyday to grow your streak and earn additional prizes.',
 		art: 'model',
 		icon: 'hourglass',
 		streak: true
@@ -54,14 +54,14 @@ export const timelineSteps: TimelineStepData[] = [
 	{
 		number: 3,
 		title: 'Finish your console, submit it!',
-		body: 'Once it is ready, show exactly what your console is. When the project is approved, you get support to order the pieces and parts needed to build a polished physical version.',
+		body: 'Once it\'s ready, showcase your console. Once we approve it, we\'ll give you a grant to order the pieces and parts needed to make it real!',
 		art: 'repo',
 		icon: 'send'
 	},
 	{
 		number: 4,
 		title: 'Build it IRL and get additional prizes!',
-		body: 'You made it. Solder and squish it all together until the console works, then send a video of it in action to claim the final prizes.',
+		body: 'Congratulations! You made it! Now solder and squish it all together until it works, then ship a video of it in action to claim your additional prizes. We\'ll also give you feedback for you to imporve your console as you build it and implementing that feedback will get you even more prizes!',
 		art: 'pcb',
 		icon: 'trophy'
 	}
@@ -80,22 +80,22 @@ export const faqs: FAQ[] = [
 	{
 		question: 'What can I make?',
 		answer:
-			'Anything from a tiny desk toy with buttons to a full handheld with a custom launcher. The only real requirement is that it feels like your own playful console idea.'
+			'Anything from a tiny desk toy with buttons to a full handheld with a custom launcher. Virtual consoles or arcade cabinets work too! We want you to be creative with your project so making something unique is strongly encouraged!'
 	},
 	{
 		question: 'What does “blit” mean?',
 		answer:
-			'In graphics programming, blitting is copying pixels from one place to another. It is a fitting name for a month about making screens, games, and hardware feel alive.'
+			'Bit blit (also written BITBLT, BIT BLT, BitBLT, Bit BLT, Bit Blt etc., which stands for bit block transfer) is a data operation commonly used in computer graphics in which several bitmaps are combined into one using a boolean function. Basically it\'s a fancy way to say copying pixels from one place to another.'
 	},
 	{
 		question: 'How do I log my hours?',
 		answer:
-			'Post a short daily devlog with what you built, what got stuck, and what comes next. Consistency matters more than polish, and the streak card is meant to reward that habit.'
+			'You can log your hours by journaling your progress and posting it as a devlog on your project page (similar to how blueprint does it!). You can post as many devlogs as you want, but only one per day will count towards your streak.'
 	},
 	{
 		question: 'Is this legit?',
 		answer:
-			'Yes. The program is structured to help Hack Clubbers go from an idea to a real console with public progress, project review, and extra rewards once the physical build is complete.'
+			'Yes. Hack Club is a 501(c)(3) nonprofit organization that runs programs like this all the time!'
 	}
 ];
 
