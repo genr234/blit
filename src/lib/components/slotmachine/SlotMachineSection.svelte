@@ -110,7 +110,7 @@
 
 				<button
 					type="button"
-					class="reddit-sans-semibold rounded-[0.7rem] bg-zinc-900 px-5 py-3 text-[1.3rem] leading-none tracking-[-0.03em] text-white transition-colors duration-200 hover:bg-zinc-800 disabled:cursor-wait disabled:bg-zinc-700"
+					class="reddit-sans-semibold rounded-[0.7rem] bg-zinc-900 px-5 py-3 text-[1.3rem] leading-none tracking-[-0.03em] text-white transition-colors duration-200 hover:bg-zinc-800 disabled:cursor-wait disabled:bg-zinc-700 cursor-pointer"
 					disabled={requestState !== 'idle'}
 					onclick={handleSpin}
 				>

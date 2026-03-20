@@ -16,7 +16,7 @@
 <div class="border-b-[3px] border-dotted border-zinc-300 py-4 last:border-b-0">
 	<button
 		type="button"
-		class="flex w-full items-start justify-between gap-4 text-left"
+		class="flex w-full items-start justify-between gap-4 text-left cursor-pointer"
 		aria-expanded={open}
 		onclick={onToggle}
 	>
