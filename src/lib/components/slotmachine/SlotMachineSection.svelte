@@ -105,7 +105,7 @@
 				></div>
 			</div>
 
-			<div class="flex flex-col gap-3 lg:pb-1">
+			<div class="flex w-fit flex-col gap-3 lg:pb-1">
 				<IconSlotMachine bind:this={machine} showResult={false} spriteOffsetX={-5} class="mx-auto lg:mx-0" />
 
 				<button
