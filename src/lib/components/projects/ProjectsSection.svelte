@@ -12,18 +12,18 @@
 	let { projects }: Props = $props();
 </script>
 
-<Section class="pt-24 sm:pt-28">
+<Section class="pt-10 sm:pt-14">
 	<Container>
 		<div class="mx-auto max-w-4xl text-center">
-			<h2 class="reddit-sans-bold text-5xl leading-none text-balance text-zinc-950">
-				Need some inspiration?
-			</h2>
-			<p class="reddit-sans mt-3 text-xl leading-tight text-balance text-zinc-500">
+			<p class="reddit-sans text-[1.7rem] leading-none tracking-[-0.03em] text-zinc-400">
+				and...
+			</p>
+			<p class="reddit-sans mt-4 text-[1.35rem] leading-tight text-balance text-zinc-500 sm:text-[1.65rem]">
 				Check out some amazing projects made by other Hack Clubbers
 			</p>
 		</div>
 
-		<div class="mt-14 grid gap-x-8 gap-y-10 md:grid-cols-2">
+		<div class="mt-12 grid gap-x-8 gap-y-10 md:grid-cols-2">
 			{#each projects as project (project.title)}
 				<ProjectCard {project} />
 			{/each}

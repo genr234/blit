@@ -1,13 +1,22 @@
-<script>
+<script lang="ts">
 	import GiftIcon from './GiftIcon.svelte';
+
+	type Props = {
+		active?: boolean;
+	};
+
+	let { active = false }: Props = $props();
 </script>
 
-<div class="borde rounded-[1.4rem] bg-white px-6 py-5 shadow-[0_12px_22px_rgba(15,23,42,0.08)]">
+<div
+	class="streak-card borde rounded-[1.4rem] bg-white px-6 py-5 shadow-[0_12px_22px_rgba(15,23,42,0.08)]"
+	class:is-active={active}
+>
 	<p
 		class="reddit-sans-semibold text-[1.1rem] leading-[1.16] text-zinc-950"
 	>
 		<span>Devlog your progress everyday and start a streak</span>
-		<span aria-hidden="true" class="ml-[0.18em] inline-block align-[-0.08em]">
+		<span aria-hidden="true" class="streak-flame ml-[0.18em] inline-block align-[-0.08em]">
 			<svg
 				width="30"
 				height="30"
@@ -38,23 +47,23 @@
 	<div class="mt-7">
 		<div class="relative h-6">
 			<div
-				class="absolute top-1/2 right-2 left-2 border-t-[3px] border-dotted border-zinc-400"
+				class="streak-rail absolute top-1/2 right-2 left-2 border-t-[3px] border-dotted border-zinc-400"
 			></div>
 			<div
-				class="absolute top-[calc(50%-0.35rem)] left-0 h-3.5 w-3.5 rounded-full bg-zinc-400"
+				class="streak-origin absolute top-[calc(50%-0.35rem)] left-0 h-3.5 w-3.5 rounded-full bg-zinc-400"
 			></div>
 			<div
-				class="absolute top-[calc(50%-0.42rem)] left-[31%] flex h-4.5 w-4.5 -translate-x-1/2 items-center justify-center bg-white text-[0.7rem] text-[#ff3b30]"
+				class="streak-gift streak-gift-one absolute top-[calc(50%-0.42rem)] left-[31%] flex h-4.5 w-4.5 -translate-x-1/2 items-center justify-center bg-white text-[0.7rem] text-[#ff3b30]"
 			>
 				<GiftIcon />
 			</div>
 			<div
-				class="absolute top-[calc(50%-0.42rem)] left-[62%] flex h-4.5 w-4.5 -translate-x-1/2 items-center justify-center bg-white text-[0.7rem] text-[#ff3b30]"
+				class="streak-gift streak-gift-two absolute top-[calc(50%-0.42rem)] left-[62%] flex h-4.5 w-4.5 -translate-x-1/2 items-center justify-center bg-white text-[0.7rem] text-[#ff3b30]"
 			>
 				<GiftIcon />
 			</div>
 			<div
-				class="absolute top-[calc(50%-0.42rem)] right-0 flex h-4.5 w-4.5 translate-x-1/2 items-center justify-center bg-white text-[0.7rem] text-[#ff3b30]"
+				class="streak-gift streak-gift-three absolute top-[calc(50%-0.42rem)] right-0 flex h-4.5 w-4.5 translate-x-1/2 items-center justify-center bg-white text-[0.7rem] text-[#ff3b30]"
 			>
 				<GiftIcon />
 			</div>
@@ -62,9 +71,104 @@
 
 		<div class="reddit-sans mt-3 grid grid-cols-[auto_31%_31%_auto] text-[0.72rem] text-zinc-500">
 			<span></span>
-			<span class="reddit-sans-bold justify-self-center text-[#ff3b30]">7 days</span>
-			<span class="reddit-sans-bold justify-self-center text-[#ff3b30]">14 days</span>
-			<span class="reddit-sans-bold justify-self-end text-[#ff3b30]">30 days</span>
+			<span class="streak-label streak-label-one reddit-sans-bold justify-self-center text-[#ff3b30]">
+				7 days
+			</span>
+			<span class="streak-label streak-label-two reddit-sans-bold justify-self-center text-[#ff3b30]">
+				14 days
+			</span>
+			<span class="streak-label streak-label-three reddit-sans-bold justify-self-end text-[#ff3b30]">
+				30 days
+			</span>
 		</div>
 	</div>
 </div>
+
+<style>
+	.streak-gift,
+	.streak-label {
+		opacity: 0;
+	}
+
+	.streak-card.is-active {
+		animation: card-in 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+	}
+
+	.streak-card.is-active .streak-rail {
+		animation: rail-draw 900ms cubic-bezier(0.22, 1, 0.36, 1) 140ms both;
+		transform-origin: left center;
+	}
+
+	.streak-card.is-active .streak-origin {
+		animation: pop-in 360ms cubic-bezier(0.34, 1.56, 0.64, 1) 220ms both;
+	}
+
+	.streak-card.is-active .streak-gift-one,
+	.streak-card.is-active .streak-label-one {
+		animation: pop-in 380ms cubic-bezier(0.34, 1.56, 0.64, 1) 380ms both;
+	}
+
+	.streak-card.is-active .streak-gift-two,
+	.streak-card.is-active .streak-label-two {
+		animation: pop-in 380ms cubic-bezier(0.34, 1.56, 0.64, 1) 520ms both;
+	}
+
+	.streak-card.is-active .streak-gift-three,
+	.streak-card.is-active .streak-label-three {
+		animation: pop-in 380ms cubic-bezier(0.34, 1.56, 0.64, 1) 660ms both;
+	}
+
+	@keyframes card-in {
+		from {
+			opacity: 0;
+			transform: translateY(12px) scale(0.985);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
+
+	@keyframes rail-draw {
+		from {
+			opacity: 0;
+			transform: scaleX(0.15);
+		}
+
+		to {
+			opacity: 1;
+			transform: scaleX(1);
+		}
+	}
+
+	@keyframes pop-in {
+		from {
+			opacity: 0;
+			transform: translateY(6px) scale(0.78);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.streak-gift,
+		.streak-label {
+			opacity: 1;
+		}
+
+		.streak-card,
+		.streak-flame,
+		.streak-rail,
+		.streak-origin,
+		.streak-gift,
+		.streak-label {
+			animation: none !important;
+			opacity: 1;
+			transform: none !important;
+		}
+	}
+</style>

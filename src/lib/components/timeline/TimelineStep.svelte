@@ -78,7 +78,7 @@
 
 			{#if step.streak}
 				<div class="mt-6 max-w-[31rem]">
-					<StreakCard />
+					<StreakCard active={isVisible} />
 				</div>
 			{/if}
 		</div>
