@@ -12,9 +12,9 @@
 <Hero />
 
 <Timeline id="how-it-works" steps={timelineSteps} questionItems={questionSections} />
+<SlotMachineSection id="idea-o-matic" questionItems={questionSections} />
+<ProjectsSection id="project-inspiration" {projects} questionItems={questionSections} />
 <GuidesSection id="never-made-this" {guides} questionItems={questionSections} />
 <FAQSection id="other-questions" {faqs} questionItems={questionSections} />
-<SlotMachineSection />
-<ProjectsSection {projects} />
 
 <Footer />

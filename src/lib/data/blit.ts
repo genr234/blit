@@ -32,6 +32,7 @@ export type Project = {
 
 export const questionSections: QuestionSection[] = [
 	{ id: 'how-it-works', label: 'Wait, how does this work?' },
+	{ id: 'idea-o-matic', label: 'Need inspiration?' },
 	{ id: 'never-made-this', label: "But I've never made something like this before!" },
 	{ id: 'other-questions', label: 'I have other questions...' }
 ];

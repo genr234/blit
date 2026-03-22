@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Project } from '$lib/data/blit';
+	import type { Project, QuestionSection } from '$lib/data/blit';
 
 	import Container from '$lib/components/layout/Container.svelte';
 	import Section from '$lib/components/layout/Section.svelte';
@@ -12,7 +12,7 @@
 	let { projects }: Props = $props();
 </script>
 
-<Section class="pt-10 sm:pt-14">
+<Section class="">
 	<Container>
 		<div class="mx-auto max-w-4xl text-center">
 			<p class="reddit-sans text-[1.7rem] leading-none tracking-[-0.03em] text-zinc-400">

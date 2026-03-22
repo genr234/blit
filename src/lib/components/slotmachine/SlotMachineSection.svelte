@@ -1,13 +1,23 @@
 <script lang="ts">
+	import type { QuestionSection as QuestionSectionItem } from '$lib/data/blit';
+
 	import Container from '$lib/components/layout/Container.svelte';
 	import Section from '$lib/components/layout/Section.svelte';
 	import IconSlotMachine from '$lib/components/slotmachine/IconSlotMachine.svelte';
+	import QuestionTransitionBand from '$lib/components/tabs/QuestionTransitionBand.svelte';
 
 	type SpinResult = {
 		labels: string[];
 		indexes: number[];
 		text: string;
 	};
+
+	type Props = {
+		id?: string;
+		questionItems?: QuestionSectionItem[];
+	};
+
+	let { id = 'idea-o-matic', questionItems = [] }: Props = $props();
 
 	let machine: { spin: (targets?: number[]) => Promise<SpinResult> } | null = null;
 	let responseText = $state(
@@ -71,14 +81,9 @@
 	}
 </script>
 
-<Section class="pt-16 pb-24 sm:pt-20 sm:pb-28">
+<Section {id} class="">
 	<Container class="max-w-6xl">
-		<p
-			class="reddit-sans mx-auto text-center text-[1.5rem] leading-none tracking-[-0.03em] text-zinc-400 sm:text-[1.8rem]"
-		>
-			Need inspiration?
-		</p>
-
+		<QuestionTransitionBand items={questionItems} activeId={id} class="mb-10" />
 		<h2
 			class="reddit-sans-bold mx-auto mt-6 max-w-[13ch] text-center text-[2.8rem] leading-[0.95] tracking-[-0.055em] text-zinc-950 sm:text-[4.1rem]"
 		>
