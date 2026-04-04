@@ -1,42 +1,9 @@
-# sv
+# Blit
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+An Hack Club YSWS ([What's that?](https://notes.deven.dev/posts/the-plan-for-hack-club-world-dominance#what-the-hell-is-a-you-ship-we-ship-ysws)) where you make your own console in only 30 days!
 
-## Creating a project
+## Development
+```bun run dev``` To start the dev server
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-bun x sv@0.12.8 create --template minimal --types ts --add prettier eslint tailwindcss="plugins:typography" devtools-json --install bun blit
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Required env vars
+```HCAI_API_KEY``` : Your Hack Club AI API Key ([Get it here!](https://ai.hackclub.com/keys))
